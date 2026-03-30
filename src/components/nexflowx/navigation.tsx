@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { DashboardDemo } from './dashboard-demo';
 import { useLanguage } from '@/lib/language-context';
 import type { Locale } from '@/lib/translations';
 
@@ -43,6 +44,13 @@ export function Navigation() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [navItems]);
+
+  // Close dropdowns on outside click
+  useEffect(() => {
+    const handleClick = () => { if (langOpen) setLangOpen(false); };
+    if (langOpen) document.addEventListener('click', handleClick);
+    return () => document.removeEventListener('click', handleClick);
+  }, [langOpen]);
 
   const scrollTo = (href: string) => {
     setMobileOpen(false);
@@ -106,7 +114,7 @@ export function Navigation() {
               {/* Language Switcher */}
               <div className="relative ml-2">
                 <button
-                  onClick={() => setLangOpen(!langOpen)}
+                  onClick={(e) => { e.stopPropagation(); setLangOpen(!langOpen); }}
                   className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#333F4D] hover:border-[#00FF66]/50 transition-colors text-sm"
                 >
                   <span>{currentLocale.flag}</span>
@@ -119,6 +127,7 @@ export function Navigation() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -8 }}
                       className="absolute top-full mt-1 right-0 py-1 rounded-lg border border-[#333F4D] bg-[#151A22] shadow-xl min-w-[100px]"
+                      onClick={(e) => e.stopPropagation()}
                     >
                       {locales.map((l) => (
                         <button
@@ -137,13 +146,10 @@ export function Navigation() {
                 </AnimatePresence>
               </div>
 
-              <Button
-                onClick={() => scrollTo('#nodes')}
-                className="ml-2 bg-[#00FF66] text-[#0B0C10] font-semibold hover:bg-[#00FF66]/90 rounded-lg"
-                style={{ fontFamily: 'var(--nx-font-body)' }}
-              >
-                {t.nav.ctaBtn}
-              </Button>
+              {/* Dashboard Demo Button */}
+              <div className="ml-2">
+                <DashboardDemo />
+              </div>
             </div>
 
             {/* Mobile Toggle */}
@@ -194,6 +200,11 @@ export function Navigation() {
                     <span>{l.label}</span>
                   </button>
                 ))}
+              </div>
+
+              {/* Mobile Dashboard Demo */}
+              <div className="px-4 py-2">
+                <DashboardDemo />
               </div>
 
               <Button

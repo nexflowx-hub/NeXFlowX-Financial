@@ -5,6 +5,7 @@ import { useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/lib/language-context';
+import { DashboardDemo } from './dashboard-demo';
 
 export function CTASection() {
   const { t } = useLanguage();
@@ -41,7 +42,7 @@ export function CTASection() {
             {t.cta.desc}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center relative">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center relative">
             <Button
               size="lg"
               className="bg-[#00FF66] text-[#0B0C10] font-bold hover:bg-[#00FF66]/90 rounded-xl h-12 px-8 text-base"
@@ -50,6 +51,7 @@ export function CTASection() {
               {t.cta.demoBtn}
               <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
+            <DashboardDemo />
             <Button
               variant="outline"
               size="lg"

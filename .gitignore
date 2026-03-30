@@ -49,3 +49,20 @@ prompt
 server.log
 # Skills directory
 /skills/
+# dev
+dev.log
+server.log
+
+# database
+db/
+*.db
+*.db-journal
+prisma/migrations/
+
+# uploads
+upload/
+
+# environment
+.env
+.env.*
+!.env.example

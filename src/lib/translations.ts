@@ -10,6 +10,7 @@ export const translations = {
       coverage: 'Coverage',
       liveNodes: 'Live Nodes',
       ctaBtn: 'Ver Live Nodes',
+      dashboardBtn: 'Dashboard Demo',
     },
     // Hero
     hero: {
@@ -148,6 +149,15 @@ export const translations = {
         nl: 'Essencial para conv.',
       },
     },
+    // Dashboard Demo
+    dashboard: {
+      navBtn: 'Dashboard Demo',
+      title: 'FLOX Orchestrator — Dashboard Demo',
+      openExternal: 'Abrir em nova janela',
+      credentials: 'Credenciais de acesso',
+      loading: 'A carregar dashboard...',
+      ctaBtn: 'Abrir Dashboard Demo',
+    },
     // CTA
     cta: {
       title1: 'Pronto para orquestrar a sua',
@@ -185,6 +195,7 @@ export const translations = {
       coverage: 'Coverage',
       liveNodes: 'Live Nodes',
       ctaBtn: 'View Live Nodes',
+      dashboardBtn: 'Dashboard Demo',
     },
     hero: {
       badge: 'Financial Supply Chain Orchestrator',
@@ -314,6 +325,15 @@ export const translations = {
         nl: 'Essential for conversion',
       },
     },
+    // Dashboard Demo
+    dashboard: {
+      navBtn: 'Dashboard Demo',
+      title: 'FLOX Orchestrator — Dashboard Demo',
+      openExternal: 'Open in new tab',
+      credentials: 'Access credentials',
+      loading: 'Loading dashboard...',
+      ctaBtn: 'Open Dashboard Demo',
+    },
     cta: {
       title1: 'Ready to orchestrate your',
       highlight: 'financial supply chain',
@@ -348,6 +368,7 @@ export const translations = {
       coverage: 'Coverage',
       liveNodes: 'Live Nodes',
       ctaBtn: 'Voir Live Nodes',
+      dashboardBtn: 'Dashboard Démo',
     },
     hero: {
       badge: 'Financial Supply Chain Orchestrator',
@@ -476,6 +497,15 @@ export const translations = {
         pt: 'Très fort en localisation',
         nl: 'Essentiel pour la conversion',
       },
+    },
+    // Dashboard Demo
+    dashboard: {
+      navBtn: 'Dashboard Démo',
+      title: 'FLOX Orchestrator — Dashboard Démo',
+      openExternal: 'Ouvrir dans un nouvel onglet',
+      credentials: "Identifiants d'accès",
+      loading: 'Chargement du tableau de bord...',
+      ctaBtn: 'Ouvrir le Dashboard Démo',
     },
     cta: {
       title1: 'Prêt à orchestrer votre',
