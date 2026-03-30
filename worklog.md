@@ -70,3 +70,25 @@ Stage Summary:
 - Full i18n system: PT (Português), EN (English), FR (Français) with instant switching
 - Language switcher in navigation with flag indicators
 - WhatsApp button pre-fills message in the correct language
+
+---
+Task ID: 3
+Agent: Main Agent
+Task: Dashboard Demo, subdomain config, GitHub push
+
+Work Log:
+- Created /src/components/nexflowx/dashboard-demo.tsx: Full-screen modal with iframe embed to demo-dashboard.nexflowx.tech
+- Dashboard modal features: loading spinner, show/hide password toggle, copy-to-clipboard for credentials, open in new tab button
+- Login credentials: user=NeXFlowX, pass=Nex123456789* (displayed in credentials bar)
+- Added Dashboard Demo button to navigation (desktop + mobile) with Monitor icon
+- Added Dashboard Demo button to CTA section alongside existing buttons
+- Added dashboard translations to all 3 locales (PT, EN, FR) in translations.ts
+- Updated .gitignore with dev.log, db/, upload/, .env exclusions
+- Pushed to GitHub: https://github.com/nexflowx-hub/NeXFlowX-Financial.git (master branch)
+
+Stage Summary:
+- Dashboard Demo accessible from nav and CTA with iframe embed
+- Credentials bar shows user/pass with copy + visibility toggle
+- Subdomain: financial.nexflowx.tech
+- GitHub repo: nexflowx-hub/NeXFlowX-Financial (2 commits)
+- All lint checks passing, dev server compiling
